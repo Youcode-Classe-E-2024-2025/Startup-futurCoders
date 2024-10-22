@@ -1,3 +1,4 @@
+
 :root {
     --green:#109810;
 
@@ -8,9 +9,14 @@
     font-size: 2rem;
     gap: 1.404rem;
     align-items: center;
+    margin-bottom:1.756rem;
 }
 .categories_head {
     margin-top: 8.174rem;
+    height: 9.567rem;
+}
+.categories_head h2 {
+    font-size: 3.16rem;
 }
 .categories_title > p{
     color: var(--green);
@@ -20,4 +26,45 @@
      height: 3.511rem;
      background-color: var(--green);
      border-radius: 0.351rem;
+}
+
+
+.categories {
+    width: 106.7rem;
+    height: 14.5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 6.833rem;
+    margin-bottom: 1.5rem;
+}
+.categories .category {
+    width: 17.0rem;
+    height: 14.5rem;
+    font-size: 1.6rem;
+    border: 1px solid rgba(0, 0, 0, 0.30);
+    border-radius: 0.4rem;
+}
+.categories a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 1.3rem;
+    padding-bottom: 2.4rem;
+}
+
+.hd{
+    gap: 1.7rem;
+}
+hr {
+    margin-bottom: 5.9rem;
+}
+.slider {
+    width: 107.3rem;
+    height: 47.6rem;
+}
+.slider img {
+    width: 100%;
 }
