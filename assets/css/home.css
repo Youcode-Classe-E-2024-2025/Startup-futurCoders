@@ -1,0 +1,23 @@
+:root {
+    --green:#109810;
+
+}
+.categories_title {
+    display: flex;
+    font-weight: bold;
+    font-size: 2rem;
+    gap: 1.404rem;
+    align-items: center;
+}
+.categories_head {
+    margin-top: 8.174rem;
+}
+.categories_title > p{
+    color: var(--green);
+}
+#fm {
+    width: 1.756rem;
+     height: 3.511rem;
+     background-color: var(--green);
+     border-radius: 0.351rem;
+}
