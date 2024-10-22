@@ -1,52 +1,141 @@
 html {
-	font-size: 10px;
+  font-size: 10px;
 }
 
 *,
 ::after,
 ::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+nav.container {
+  display: flex;
+  font-size: 1.6rem;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+a.logo {
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+nav a span:first-child {
+  color: black;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+nav a span:last-child {
+  color: #109810;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.links-div {
+  margin-right: 7rem;
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  gap: 4.8rem;
+}
+
+.icon-div {
+  display: flex;
+  align-items: center;
+  gap: 3.9rem;
+}
+
+button {
+  width: 8.7rem;
+  height: 4.3rem;
+  background-color: #109810;
+  border: none;
+  font-weight: bold;
+}
+
+button span:first-child {
+  color: white;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+button span:last-child {
+  color: black;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+.icon-div ul {
+  list-style: none;
+  display: flex;
+  gap: 3.9rem;
 }
 
 .container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 0 6rem;
-	/* background-color: aqua; */
-	height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 6rem;
+}
+
+.menu {
+  display: none;
 }
 
 @media (max-width: 1024px) {
-	html {
-		font-size: 8px;
-	}
+  html {
+    font-size: 8px;
+  }
 
-	.container {
-		max-width: 920px;
-	}
+  .container {
+    max-width: 920px;
+  }
 }
 
 @media (max-width: 768px) {
-	html {
-		font-size: 6.5px;
-	}
+  html {
+    font-size: 6.5px;
+  }
 
-	.container {
-		max-width: 640px;
-		padding: 0 4rem;
-	}
+  .container {
+    max-width: 640px;
+    padding: 0 4rem;
+  }
 }
 
 @media (max-width: 440px) {
-	html {
-		font-size: 5px;
-	}
+  html {
+    font-size: 5px;
+  }
 
-	.container {
-		max-width: 380px;
-	}
+  .container {
+    max-width: 380px;
+  }
+  header .links,
+  header li:not(.menu) {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
 }
 
 /* .container div {
