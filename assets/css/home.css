@@ -53,6 +53,8 @@
     justify-content: end;
     gap: 1.3rem;
     padding-bottom: 2.4rem;
+    text-decoration: none;
+    
 }
 
 .hd{
