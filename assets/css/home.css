@@ -87,10 +87,11 @@ hr {
     position: relative;
 }
 .images_slider::-webkit-scrollbar { display: none; }
-.slider img {
+.images_slider  img {
     scroll-snap-align: start;
     object-fit: cover;
-    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
     height: auto;
 }
 .nav-slider {
@@ -109,8 +110,27 @@ hr {
     border-radius: 50%;
     background-color: rgb(255, 255, 255);
     opacity: 0.75;
-    transition:all ease 250ms;
+    transition:allgit linear 2s;
 }
 .nav-slider a:hover {
     opacity: 1;
+}
+@media (max-width:1024px) {
+    .categories {
+       gap: 10rem;
+    }
+    
+}
+@media (max-width:768px) {
+    .categories {
+        gap: 6rem;
+    }
+    
+}
+
+@media (max-width:426px) {
+    .categories {
+       gap:9rem;
+    }
+    
 }
