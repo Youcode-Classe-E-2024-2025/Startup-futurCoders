@@ -68,7 +68,7 @@
 .hd{
     gap: 1.7rem;
 }
-hr {
+.caty {
     margin-bottom: 5.9rem;
 }
 /* slide */
@@ -101,7 +101,7 @@ hr {
     bottom: 1.4rem;
     left: 50%;
     top:93%;
-    transform: translate(50%);
+    transform: translate(-50%);
     z-index: 1;
 }
 .nav-slider a {
@@ -114,6 +114,9 @@ hr {
 }
 .nav-slider a:hover {
     opacity: 1;
+}
+.intro{
+    margin-bottom: 4.328rem;
 }
 @media (max-width:1024px) {
     .categories {
