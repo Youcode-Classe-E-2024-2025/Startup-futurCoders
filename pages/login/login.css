@@ -1,0 +1,74 @@
+.login_form{
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    margin: 10rem;
+}
+.login_title{
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+}
+.form_log{
+    display: flex;
+    margin-left: 4rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.filbox{
+    border-width: 0px 0px 1px 0px;
+    outline: none;
+    padding-right: 15rem;
+    margin: 2rem 0px;
+    font-size: 1.5rem;
+}
+.login_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Forget{
+    font-size: 1.6rem;
+    color: #109810;
+    text-decoration: none;
+}
+.login-img{
+    width: 55rem;
+    height: 55rem;
+}
+.btn{
+    background-color: #109810;
+    border-width: 0px;
+    padding: 1.5rem 4rem;
+    border-radius: 0.3rem;
+    color: white;
+    font-size: 1.6rem;
+}
+/********** Media queries **********/
+/******** Laptop *********/
+@media (max-width: 1024px) {
+
+}
+  
+/******** Tablet *********/
+@media (max-width: 768px) {
+
+}
+/******** Mobile *********/
+@media (max-width: 440px) {
+.login-img{
+    width: 40rem;
+    height: 40rem;
+    border-radius: 20rem;
+}
+.login_form{
+    font-size: 10px;
+    flex-direction: column;
+}
+.login_title{
+    text-align: center;
+    font-size: 5rem;
+}
+}
