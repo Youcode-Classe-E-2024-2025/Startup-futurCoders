@@ -26,6 +26,7 @@ img {
 	display: block;
 	object-fit: cover;
 }
+
 /******** Start nav *********/
 nav.container {
 	display: flex;

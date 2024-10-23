@@ -14,7 +14,7 @@
 	font-size: 2rem;
 	position: relative;
 	padding-left: 5rem;
-	margin-bottom: 3rem;
+	margin-bottom: 6rem;
 }
 
 .products > .title::before {
@@ -61,15 +61,29 @@
 }
 
 .product-card .title {
-	font-size: 1.8rem;
+	font-size: calc(1.2rem + 6px);
 	font-weight: 500;
 	margin-bottom: 1rem;
 }
 
 .product-card .price {
-	font-size: 1.8rem;
+	font-size: calc(1.2rem + 6px);
 	color: #109810;
 	font-weight: 500;
 }
 
 /*********  media queries *********/
+
+/******** mobile ********/
+@media (max-width: 440px) {
+	.products .wrapper {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(120px, 1fr));
+		grid-template-rows: repeat(4, auto);
+		gap: 4rem;
+	}
+
+	.product-card button {
+		font-size: 8px;
+	}
+}
