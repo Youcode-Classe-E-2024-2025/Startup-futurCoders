@@ -38,7 +38,6 @@
 	background-color: #f5f5f5;
 	display: flex;
 	align-items: center;
-	/* width: fit-content; */
 	overflow: hidden;
 	max-width: 100%;
 	aspect-ratio: 1;

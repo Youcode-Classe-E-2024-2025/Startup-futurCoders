@@ -403,14 +403,119 @@ if (currentUrlPathname.includes("/pages/products/products.html")) {
 			displayProductsByCategory(category);
 		}
 	}
-
+	const productsCard = document.querySelectorAll(".product-card");
+	console.log(productsCard);
+	productsCard.forEach((product) =>
+		product.addEventListener("click", function (event) {
+			console.log(product.id);
+			const currentUrl = new URL(window.location.href);
+			currentUrl.searchParams.delete("category");
+			currentUrl.searchParams.set("id", String(product.id));
+			console.log(currentUrl);
+			window.location.href = currentUrl.toString();
+		})
+	);
+	// if we have an id in the url query display the product with that id
 	if (id) {
 		const productDetail = products.find(
 			(product) => product.id === Number(id)
 		);
+		main.innerHTML = `
+			<section class="container">
+				<div class="image">
+					<img
+						src="../../assets/images/products/${productDetail.imageSrc}"
+						alt="black mouse"
+					/>
+				</div>
+				<div class="details">
+					<h1>${productDetail.title}</h1>
+					<div class="reviews">
+						<div class="stars">
+							<i class="fa-solid fa-star fa-2xl"></i>
+							<i class="fa-solid fa-star fa-2xl"></i>
+							<i class="fa-solid fa-star fa-2xl"></i>
+							<i class="fa-solid fa-star fa-2xl"></i>
+							<i class="fa-solid fa-star fa-2xl"></i>
+						</div>
+						<p class="review-txt">
+							(150 Reviews) &nbsp;&nbsp;|&nbsp;&nbsp;
+							<span class="green-txt">In Stock</span>
+						</p>
+					</div>
+					<div class="price">
+						<p>${productDetail.price}.00</p>
+					</div>
+					<div class="description">
+						<p>
+						${productDetail.description}
+						</p>
+					</div>
+					<div class="colors">
+						<p>Colours:</p>
+						<div>
+							<ul>
+								<li><span></span></li>
+								<li><span></span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="size">
+						<p>Size:</p>
+						<div class="size-btns">
+							<button ${productDetail.size === "XS" ? 'class="green"' : ""}>XS</button>
+							<button ${productDetail.size === "S" ? 'class="green"' : ""}>S</button>
+							<button ${productDetail.size === "M" ? 'class="green"' : ""}>M</button>
+							<button ${productDetail.size === "L" ? 'class="green"' : ""}>L</button>
+							<button ${productDetail.size === "XL" ? 'class="green"' : ""}>XL</button>
+						</div>
+					</div>
+					<div class="quantity">
+						<div class="quantity-btns">
+							<button>-</button>
+							<input type="text" value="2" />
+							<button>+</button>
+						</div>
+						<div class="buy">
+							<button>Buy Now</button>
+						</div>
+					</div>
+					<div class="delivery">
+						<div class="free-delivery">
+							<div class="icon">
+								<svg
+									width="24"
+									height="24"
+									xmlns="http://www.w3.org/2000/svg"
+									fill-rule="evenodd"
+									clip-rule="evenodd"
+								>
+									<path
+										d="M5 11v1h8v-7h-10v-1c0-.552.448-1 1-1h10c.552 0 1 .448 1 1v2h4.667c1.117 0 1.6.576 1.936 1.107.594.94 1.536 2.432 2.109 3.378.188.312.288.67.288 1.035v4.48c0 1.089-.743 2-2 2h-1c0 1.656-1.344 3-3 3s-3-1.344-3-3h-4c0 1.656-1.344 3-3 3s-3-1.344-3-3h-1c-.552 0-1-.448-1-1v-6h-2v-2h7v2h-3zm3 5.8c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm10 0c.662 0 1.2.538 1.2 1.2 0 .662-.538 1.2-1.2 1.2-.662 0-1.2-.538-1.2-1.2 0-.662.538-1.2 1.2-1.2zm-3-2.8h-10v2h.765c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h5.53c.549-.614 1.347-1 2.235-1 .888 0 1.686.386 2.235 1h1.765v-4.575l-1.711-2.929c-.179-.307-.508-.496-.863-.496h-4.426v6zm1-5v3h5l-1.427-2.496c-.178-.312-.509-.504-.868-.504h-2.705zm-16-3h8v2h-8v-2z"
+									/>
+								</svg>
+							</div>
+							<div class="delivery-info">
+								<p>Free Delivery</p>
+								<p>Enter your postal code for Delivery Availability</p>
+							</div>
+						</div>
+						<div class="return">
+							<div class="icon">
+								<i class="fa-solid fa-undo fa-2xl"></i>
+							</div>
+							<div class="return-info">
+								<p>Return Delivery</p>
+								<p>
+									Free 30 Days Delivery Returns. <span>Details</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		`;
 
 		console.log(productDetail);
 	}
-
-	//
 }
