@@ -2,7 +2,7 @@
     display: flex;
     justify-self: center;
     align-items: center;
-    margin: 10rem;
+    margin: 10rem 0px;
 }
 .login_title{
     font-size: 3rem;
@@ -54,7 +54,10 @@ h3{
   
 /******** Tablet *********/
 @media (max-width: 768px) {
-
+.login-img{
+    width: 40rem;
+    height: 40rem;
+}
 }
 /******** Mobile *********/
 @media (max-width: 440px) {
@@ -64,7 +67,6 @@ h3{
     border-radius: 20rem;
 }
 .login_form{
-    font-size: 10px;
     flex-direction: column;
 }
 .login_title{
