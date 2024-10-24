@@ -21,6 +21,12 @@ a:focus {
   text-decoration: underline;
 }
 
+img {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
 /******** Start nav *********/
 nav.container {
   display: flex;
@@ -64,7 +70,7 @@ nav a span:last-child {
   gap: 3.9rem;
 }
 
-button {
+nav button {
   width: 8.7rem;
   height: 4.3rem;
   background-color: #109810;
@@ -72,11 +78,11 @@ button {
   font-weight: bold;
 }
 
-button span:first-child {
+nav button span:first-child {
   color: white;
 }
 
-button span:last-child {
+nav button span:last-child {
   color: black;
 }
 
@@ -243,6 +249,25 @@ footer i {
   #sidenav.show {
     display: flex;
     flex-direction: column;
+  }
+  #sidenav li a {
+    color: white;
+  }
+  #sidenav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 218px;
+    padding: 2rem;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    background-color: black;
+  }
+  #sidenav.show {
+    display: flex;
   }
   #sidenav li a {
     color: white;
