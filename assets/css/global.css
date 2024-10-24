@@ -22,10 +22,10 @@ a:focus {
   text-decoration: underline;
 }
 
-img {
-  max-width: 100%;
-  display: block;
-  object-fit: cover;
+button,
+i,
+svg {
+  cursor: pointer;
 }
 
 img {
@@ -83,14 +83,17 @@ nav button {
   background-color: #109810;
   border: none;
   font-weight: bold;
+  border-radius: 0.3rem;
 }
 
 nav button span:first-child {
   color: white;
+  font-size: 1.6rem;
 }
 
 nav button span:last-child {
   color: black;
+  font-size: 1.6rem;
 }
 
 .icon-div ul {
@@ -174,7 +177,7 @@ footer i {
 }
 
 .quick-link ul {
-  line-height: 4rem;
+  line-height: 3rem;
   font-size: 1.4rem;
 }
 
@@ -194,6 +197,15 @@ footer i {
 .copyright {
   font-size: 1.2rem;
   color: gray;
+}
+
+i {
+  color: black;
+}
+
+footer a,
+footer p {
+  color: white;
 }
 /******** End footer ********/
 
@@ -272,6 +284,7 @@ footer i {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: none;
     background-color: black;
+    z-index: 1000;
   }
   #sidenav.show {
     display: flex;
@@ -286,13 +299,7 @@ footer i {
     color: white;
   }
 }
-i {
-  color: black;
-}
-footer a,
-footer p {
-  color: white;
-}
+
 /* .container div {
 	background-color: burlywood;
 	height: 100%;

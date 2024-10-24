@@ -18,6 +18,20 @@ section.container {
   object-fit: cover;
 }
 
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex: 1.4;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 3.2rem;
+  margin: 0;
+}
+
 .reviews {
   display: flex;
   gap: 1rem;
@@ -47,20 +61,6 @@ section.container {
 
 .green-txt {
   color: #00ff66;
-}
-
-.details {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
-  flex: 1.4;
-}
-
-h1 {
-  font-weight: 500;
-  font-size: 3.2rem;
-  margin: 0;
 }
 
 .price {
