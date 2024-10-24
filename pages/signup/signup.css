@@ -71,6 +71,7 @@ h3 {
   color: white;
   border-width: 0.1rem;
   border-color: grey;
+  cursor: pointer;
 }
 #google_btn {
   background-color: #fff;
