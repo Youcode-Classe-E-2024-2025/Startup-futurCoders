@@ -47,12 +47,13 @@
 .product-card button {
 	display: block;
 	width: 100%;
-	padding: 1rem;
+	padding: 1.2rem;
 	margin-bottom: 1rem;
 	font-size: 1.2rem;
 	background-color: black;
 	color: white;
 	font-weight: 500;
+	border: none;
 }
 
 .product-card i {

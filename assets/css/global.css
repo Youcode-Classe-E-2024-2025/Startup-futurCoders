@@ -225,7 +225,6 @@ footer i {
 		max-width: 380px;
 	}
 
-	/* .links, */
 	header .search-chart {
 		display: none;
 	}
@@ -268,7 +267,3 @@ footer a,
 footer p {
 	color: white;
 }
-/* .container div {
-	background-color: burlywood;
-	height: 100%;
-} */

@@ -1,5 +1,4 @@
 "use strict";
-console.log("hello");
 
 // navbar functionality
 const mynav = document.getElementById("sidenav");
@@ -9,8 +8,6 @@ openbtn.addEventListener("click", function () {
 	mynav.classList.toggle("show");
 });
 
-console.log("hello");
-//////// display the list of products ////////
 const currentUrlPathname = window.location.pathname;
 const products = [
 	// PCs
@@ -336,15 +333,17 @@ const products = [
 		size: "S",
 	},
 ];
-console.log("hello");
 
 // making this code running just if we are on the products page
-console.log(currentUrlPathname);
-console.log(currentUrlPathname.includes("/pages/products/products.html"));
+const query = new URLSearchParams(window.location.search);
+const category = query.get("category");
+const id = query.get("id");
+console.log(category);
 
 if (currentUrlPathname.includes("/pages/products/products.html")) {
-	// importing the list of products
-	// get categories of products
+	//////// display the list of products ////////
+
+	// get categories
 	const categories = [...new Set(products.map((p) => p.category))];
 
 	// select the main container
@@ -352,17 +351,16 @@ if (currentUrlPathname.includes("/pages/products/products.html")) {
 	const productsAsHTML = products.map((product, i) => {
 		return {
 			category: product.category,
-			markup: `
-		<article class="product-card">
-			<div class="image">
-				<img src="../../assets/images/products/${product.imageSrc}" alt="${product.title}" />
-			</div>
-			<button>
-				<i class="fa-solid fa-cart-plus"></i> Add To Cart
-			</button>
-			<h4 class="title">${product.title}</h4>
-			<p class="price">${product.price}</p>
-		</article>`,
+			markup: `<article class="product-card" id="${product.id}">
+							<div class="image">
+								<img src="../../assets/images/products/${product.imageSrc}" alt="${product.title}" />
+							</div>
+							<button>
+								<i class="fa-solid fa-cart-plus"></i> Add To Cart
+							</button>
+							<h4 class="title">${product.title}</h4>
+							<p class="price">${product.price}</p>
+						</article>`,
 		};
 	});
 
@@ -389,7 +387,6 @@ if (currentUrlPathname.includes("/pages/products/products.html")) {
 		return { category: category, markup: productsSection };
 	});
 
-	// main.insertAdjacentElement("beforeend", productByCategoryAsHTML[0].markup);
 	function displayProductsByCategory(category) {
 		const sectionProducts = productByCategoryAsHTML.find(
 			(section) => section.category.toLowerCase() === category.toLowerCase()
@@ -398,9 +395,22 @@ if (currentUrlPathname.includes("/pages/products/products.html")) {
 		main.insertAdjacentElement("beforeend", sectionProducts.markup);
 	}
 
-	function displayAllProducts() {
-		categories.forEach((category) => displayProductsByCategory(category));
+	// if category value is "all" display all products
+	if (category) {
+		if (category === "all")
+			categories.forEach((category) => displayProductsByCategory(category));
+		else {
+			//else display products by category received by query params
+			displayProductsByCategory(category);
+		}
 	}
 
-	displayAllProducts();
+	if (id) {
+		const productDetail = products.find(
+			(product) => product.id === Number(id)
+		);
+		console.log(productDetail);
+	}
+
+	//
 }
