@@ -337,7 +337,6 @@ const products = [
 const query = new URLSearchParams(window.location.search);
 const category = query.get("category");
 const id = query.get("id");
-console.log(category);
 
 if (currentUrlPathname.includes("/pages/products/products.html")) {
 	//////// display the list of products ////////
@@ -404,10 +403,8 @@ if (currentUrlPathname.includes("/pages/products/products.html")) {
 		}
 	}
 	const productsCard = document.querySelectorAll(".product-card");
-	console.log(productsCard);
 	productsCard.forEach((product) =>
 		product.addEventListener("click", function (event) {
-			console.log(product.id);
 			const currentUrl = new URL(window.location.href);
 			currentUrl.searchParams.delete("category");
 			currentUrl.searchParams.set("id", String(product.id));
