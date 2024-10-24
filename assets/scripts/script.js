@@ -512,7 +512,19 @@ if (currentUrlPathname.includes("/pages/products/products.html")) {
 				</div>
 			</section>
 		`;
-
-		console.log(productDetail);
 	}
 }
+
+document.body.insertAdjacentHTML(
+	"beforeend",
+	'<div class="loader-container"><div class="loader"></div></div>'
+);
+document.body.style.overflow = "hidden";
+
+window.addEventListener("load", function () {
+	console.log("loaded");
+	setTimeout(() => {
+		document.querySelector(".loader-container").remove();
+		document.body.style.overflowY = "auto";
+	}, 300);
+});

@@ -32,6 +32,15 @@
 .product-card {
 	display: flex;
 	flex-direction: column;
+	cursor: pointer;
+}
+
+.product-card:hover img {
+	scale: 1.1;
+}
+
+.product-card img {
+	transition: scale 0.3s ease;
 }
 
 .product-card .image {
