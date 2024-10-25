@@ -13,12 +13,15 @@ header nav.container {
   align-items: center;
   margin: 10rem 0px;
 }
-.login_title {
-  font-size: 3rem;
+.login_title{
+  font-size: 3.16rem;
   margin-bottom: 2rem;
+  font-weight: 500;
 }
-h3 {
-  font-size: 1.5rem;
+h3{
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
 }
 .form_log {
   display: flex;
