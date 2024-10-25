@@ -143,7 +143,6 @@
 .faq h3 {
   cursor: pointer;
   margin: 0;
-  transition: background 0.3s;
   font-size: 2rem;
   font-weight: 600;
   text-transform: none;
@@ -170,6 +169,7 @@
   align-items: center;
   padding: 1.5rem;
   border: 0.1rem solid #ecefec;
+  cursor: pointer;
 }
 
 .question i {
