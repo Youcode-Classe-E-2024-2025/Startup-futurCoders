@@ -21,7 +21,7 @@
     />
     <link rel="stylesheet" href="../../assets/css/normalize.css" />
     <link rel="stylesheet" href="../../assets/css/global.css" />
-    <title>Document</title>
+    <title>sing-up</title>
   </head>
   <body>
     <header>
@@ -34,7 +34,9 @@
         <div class="links-div">
           <ul class="links" id="sidenav">
             <li><a href="../../index.html">Home</a></li>
-            <li><a href="">Products</a></li>
+            <li>
+              <a href="../products/products.html?category=all">Products</a>
+            </li>
             <li><a href="../../index.html#faq">FAQ</a></li>
             <li><a href="#">Contact</a></li>
             <li><a href="../login/login.html">login</a></li>
@@ -65,7 +67,7 @@
           width="200px"
           height="200px"
         />
-        <form class="form_log" method="Post">
+        <form class="form_log" method="Post" action="../../index.html">
           <h1 class="login_title">create an account</h1>
           <h3>Enter your details below</h3>
           <input class="filbox" type="text" placeholder="Name" />
@@ -80,7 +82,7 @@
             <button id="google_btn">
               <img
                 class="google_icon"
-                src="../../assets/icons/Icon-Google.png"
+                src="../../assets/icons/Icon-Google.svg"
                 alt=""
                 width="18"
               />Sign up with Google
@@ -94,8 +96,10 @@
         </form>
       </section>
     </main>
+    <!-- Footer section -->
     <footer>
       <div class="container">
+        <!-- Logo and social media links -->
         <div class="box">
           <a href="#"><span>Future</span><span>Coders</span></a>
           <div class="social-media">
@@ -115,23 +119,36 @@
             </ul>
           </div>
         </div>
+
+        <!-- Quick links section -->
         <div class="quick-link">
           <p>Quick Link</p>
           <ul>
             <li><a href="">Privacy Policy</a></li>
             <li><a href="">Terms Of Use</a></li>
-            <li><a href="">Contact</a></li>
+            <li><a href="/pages/conatct/contact.html">Contact</a></li>
           </ul>
         </div>
+
+        <!-- Support contact details -->
         <div class="support">
           <p>Support</p>
           <ul>
-            <li><a href="">Safi -marrakech</a></li>
-            <li><a href="">exclusive@gmail.com</a></li>
-            <li><a href="">+88015-88888-9999</a></li>
+            <li>
+              <a
+                href="https://www.google.com/maps/@48.709744,2.16754,16z?hl=fr"
+                target="_blank"
+                >Safi-marrakech</a
+              >
+            </li>
+            <li>
+              <a href="mailto:FutureCoders@gmail.com">FutureCoders@gmail.com</a>
+            </li>
+            <li><a href="tel:+88015-88888-9999">+88015-88888-9999</a></li>
           </ul>
         </div>
       </div>
+      <!-- Copyright notice -->
       <p class="copyright">© Copyright Rimel 2024. All right reserved</p>
     </footer>
     <script src="../../assets/scripts/script.js"></script>

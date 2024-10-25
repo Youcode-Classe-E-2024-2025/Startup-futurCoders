@@ -32,6 +32,7 @@ h3 {
   padding-right: 15rem;
   margin: 2rem 0px;
   font-size: 1.5rem;
+  padding-bottom: 0.7rem;
 }
 .login_btn {
   display: flex;
@@ -71,6 +72,7 @@ h3 {
   color: white;
   border-width: 0.1rem;
   border-color: grey;
+  cursor: pointer;
 }
 #google_btn {
   background-color: #fff;
@@ -88,11 +90,12 @@ h3 {
   color: gray;
   text-align: center;
   margin-top: 1rem;
+  font-weight: 400;
 }
 .log_alt {
   color: #000;
   margin-left: 1rem;
-  text-decoration: none;
+  text-decoration: underline;
 }
 /********** Media queries **********/
 /******** Laptop *********/

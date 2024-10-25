@@ -86,7 +86,14 @@
     aspect-ratio: 16/9;
     position: relative;
 }
+/* Hide the scrollbar */
+/* chrom */
 .images_slider::-webkit-scrollbar { display: none; }
+/* firefox */
+.images_slider {
+    scrollbar-width: none; 
+  }
+
 .images_slider  img {
     scroll-snap-align: start;
     object-fit: cover;
