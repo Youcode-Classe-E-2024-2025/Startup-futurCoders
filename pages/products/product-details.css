@@ -175,8 +175,15 @@ section.container .quantity-btns button:first-child {
 	border: 1px solid rgb(162, 159, 159);
 	border-top-left-radius: 5px;
 	border-bottom-left-radius: 5px;
+	transition: all 0.2s linear;
 }
-
+section.container .quantity-btns button:first-child:hover {
+	background-color: black;
+	color: white;
+}
+section.container .quantity-btns button:last-child:hover {
+	background-color: black;
+}
 section.container .quantity-btns button:last-child {
 	background-color: #109810;
 	border: 1px solid rgb(162, 159, 159);
@@ -205,8 +212,11 @@ section.container .quantity .buy button {
 	height: 5rem;
 	font-size: 1.4rem;
 	font-weight: 500;
+	transition: all 0.2s linear;
 }
-
+section.container .quantity .buy button:hover{
+	background-color: #000000;
+}
 section.container .delivery {
 	display: flex;
 	flex-direction: column;
