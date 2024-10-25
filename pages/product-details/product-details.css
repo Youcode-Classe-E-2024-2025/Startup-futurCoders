@@ -204,6 +204,8 @@ h1 {
   height: 5rem;
   font-size: 1.4rem;
   font-weight: 500;
+  outline: none;
+  border: none;
 }
 
 .delivery {

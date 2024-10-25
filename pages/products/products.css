@@ -62,6 +62,10 @@
 	color: white;
 	font-weight: 500;
 	border: none;
+	transition: all 0.2s linear;
+}
+.product-card button:hover{
+     background-color: #109810;
 }
 
 .product-card i {
