@@ -117,9 +117,6 @@ main {
   
   /* Tablet view adjustments */
   @media (max-width: 768px) {
-    *{
-      border: 1px solid black;
-    }
     main {
       flex-direction: column;
     }
@@ -145,19 +142,22 @@ main {
   }
   
   /* Mobile view adjustments */
-  @media (max-width: 370px) {
+  @media (max-width: 440px) {
     form > .up {
       flex-direction: column;
-      max-width: 68rem;
+      width: 100%;
     }
   
     form button {
-      width: 50%;
-      align-self: center;
+      width: 100%;
+      height: 6rem;
     }
     form {
-      max-width: 68rem;
+      width: 100%;
       max-height: 38.845rem;
+    }
+    form> .up input {
+      width: 100%;
     }
   }
   
