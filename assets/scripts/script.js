@@ -528,3 +528,31 @@ window.addEventListener("load", function () {
 		document.body.style.overflowY = "auto";
 	}, 300);
 });
+
+
+// Adding the open-close functionnality to FAQ section
+
+const faqs = document.querySelectorAll(".faq");
+
+      faqs.forEach((faq) => {
+        faq.addEventListener("click", () => {
+          faqs.forEach((item) => {
+            const reponse = item.querySelector(".reponse");
+            const icone = item.querySelector("i");
+
+            if (item !== faq) {
+              reponse.style.display = "none";
+              icone.classList.add("fa-plus");
+              icone.classList.remove("fa-minus");
+            }
+          });
+
+          const reponse = faq.querySelector(".reponse");
+          reponse.style.display =
+            reponse.style.display === "block" ? "none" : "block";
+
+          const icone = faq.querySelector("i");
+          icone.classList.toggle("fa-plus");
+          icone.classList.toggle("fa-minus");
+        });
+      });
