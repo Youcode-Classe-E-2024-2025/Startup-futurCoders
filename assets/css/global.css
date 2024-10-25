@@ -96,6 +96,9 @@ nav a span:last-child {
 	gap: 3.9rem;
 }
 
+.icon-div li i:hover {
+	color: #109810e1;
+}
 nav button {
 	width: 8.7rem;
 	height: 4.3rem;
@@ -187,6 +190,9 @@ footer a span:last-child {
 
 footer i {
 	color: white;
+}
+footer i:hover {
+	color: #109810;
 }
 
 .quick-link {
