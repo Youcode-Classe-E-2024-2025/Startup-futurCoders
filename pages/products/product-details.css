@@ -213,6 +213,8 @@ section.container .quantity .buy button {
 	font-size: 1.4rem;
 	font-weight: 500;
 	transition: all 0.2s linear;
+	border: none;
+	outline: none;
 }
 section.container .quantity .buy button:hover{
 	background-color: #000000;
