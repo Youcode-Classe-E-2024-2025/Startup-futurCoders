@@ -85,8 +85,15 @@ nav button {
 	border: none;
 	font-weight: bold;
 	border-radius: 0.3rem;
+	transition: all 0.2s linear;
+}
+nav button:hover {
+	background-color: #0f0e0e;
 }
 
+nav button:hover span:last-child {
+	color: #109810;
+}
 nav button span:first-child {
 	color: white;
 	font-size: 1.6rem;

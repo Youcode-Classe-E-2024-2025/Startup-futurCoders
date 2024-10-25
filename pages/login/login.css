@@ -47,6 +47,10 @@ h3{
     color: white;
     font-size: 1.6rem;
     cursor: pointer;
+    transition: all 0.2s linear;
+}
+.btn:hover {
+    background-color: black;
 }
 /********** Media queries **********/
 /******** Laptop *********/
