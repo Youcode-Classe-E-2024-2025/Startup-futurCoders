@@ -125,6 +125,65 @@
 .intro{
     margin-bottom: 4.328rem;
 }
+.faq-container {
+    margin: auto;
+    background: #fff;
+    padding: 2.0rem;
+  }
+  
+  .faq {
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+  }
+
+
+  
+  .faq h3 {
+    cursor: pointer;
+    margin: 0;
+    transition: background 0.3s;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: none;
+  }
+  
+  .faq p {
+    font-size: 1.8rem;
+    line-height: 1.5;
+    display: none;
+    padding: 1.5rem;
+    margin: 0;
+    border: 1px solid #ecefec;
+    text-transform: none;
+  }
+  .faq-images {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .question {
+    background-color: #ecefec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border: .1rem solid #ecefec;
+  }
+
+  .question i {
+    color: black;
+  }
+  
+  .questions h2 {
+    font-size: 3.16rem;
+    display: flex;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  .question i:hover{
+    color: #109810;
+  }
 @media (max-width:1024px) {
     .categories {
        gap: 10rem;
